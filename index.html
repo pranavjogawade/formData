@@ -1,0 +1,48 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+    <script src="script.js"></script>
+    <style>
+      .button{
+        border: 1px solid #000;
+        padding: 8px;
+        clear: both;
+        margin-top: 10px;
+        display: inline-block;
+      }
+      </style>
+  </head>
+  <body>
+
+<div ng-controller="Ctrl">
+   <div class='default-form'>
+      <h3>Form Content 0 Default</h3>
+      <input type="text" name="firstName">
+    </div>
+    <div class='default-form' ng-show="formData.form1.showFlag">
+      <h3>Form Content 1</h3>
+      <input type="text" name="firstName">
+      <a ng-click="removeForm('form1')" class="button">remove</a>
+    </div>
+    <div class='default-form' ng-show="formData.form2.showFlag">
+      <h3>Form Content 2</h3>
+      <input type="text" name="firstName">
+      <a ng-click="removeForm('form2')" class="button">remove</a>
+    </div>
+    <div class='default-form' ng-show="formData.form3.showFlag">
+      <h3>Form Content 3</h3>
+      <input type="text" name="firstName">
+      <a ng-click="removeForm('form3')" class="button">remove</a>
+    </div>
+    <div style="clear:both">
+      <a ng-click="addForm()" class="button">Add</a>
+    </div>
+    
+  
+</div>
+
+
+
+  </body>
+</html>
